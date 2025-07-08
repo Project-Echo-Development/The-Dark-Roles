@@ -53,8 +53,8 @@ namespace TheDarkRoles.Roles.Neutral
         public void OnCheckMurderAsKiller(MurderInfo info)
         {
             var (killer, target) = info.AttemptTuple;
-            if (!IsMarked(target.PlayerId))
-                Marked.Add(target.PlayerId, true);
+            if (!IsMarked(target.PlayerId) && target is not null)
+                Marked[target.PlayerId] = true;
             info.DoKill = false;
         }
 
@@ -71,6 +71,7 @@ namespace TheDarkRoles.Roles.Neutral
                         var state = PlayerState.GetByPlayerId(player.PlayerId);
                         state.DeathReason = CustomDeathReason.Hit;
                         state.SetDead();
+                        Marked.Clear();
                     } 
                 }
             }

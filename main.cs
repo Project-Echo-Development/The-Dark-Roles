@@ -104,7 +104,7 @@ namespace TheDarkRoles
         public static ConfigEntry<int> MessageWait { get; private set; }
         public static ConfigEntry<bool> ShowResults { get; private set; }
 
-        public static Dictionary<byte, PlayerVersion> playerVersion = new();
+        public static Dictionary<byte, PlayerVersion> playerVersion = [];
         //Preset Name Options
         public static ConfigEntry<string> Preset1 { get; private set; }
         public static ConfigEntry<string> Preset2 { get; private set; }

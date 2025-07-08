@@ -22,6 +22,7 @@ using TheDarkRoles.Roles.AddOns.Impostor;
 using TheDarkRoles.Roles.AddOns.Crewmate;
 using static TheDarkRoles.Translator;
 using Hazel;
+using TheDarkRoles.Roles.Crewmate;
 
 namespace TheDarkRoles
 {
@@ -126,8 +127,9 @@ namespace TheDarkRoles
         public static void RpcRandomVentTeleport(this PlayerControl player)
         {
             var vents = UnityEngine.Object.FindObjectsOfType<Vent>();
-            var rand = IRandom.Instance;
-            var vent = vents[rand.Next(0, vents.Count)];
+            var randInstance = IRandom.Instance;
+            var rand = randInstance.Next(0, vents.Count);
+            var vent = vents[(player.GetCustomRole() == CustomRoles.Magician && (rand == Magician.vent)) ? rand + 1 : rand];
 
             Logger.Info($" {vent.transform.position}", "Rpc Vent Teleport Position");
             player.RpcTeleport(new Vector2(vent.transform.position.x, vent.transform.position.y + 0.3636f));

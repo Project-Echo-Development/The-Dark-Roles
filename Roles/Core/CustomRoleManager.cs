@@ -413,6 +413,7 @@ public enum CustomRoles
     Doctor,
     Seer,
     TimeManager,
+    Magician,
     //Neutral
     Arsonist,
     Egoist,

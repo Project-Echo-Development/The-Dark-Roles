@@ -197,9 +197,13 @@ public abstract class RoleBase : IDisposable
     /// <returns>falseを返すとベントから追い出されます</returns>
     public virtual bool OnEnterVent(PlayerPhysics physics, int ventId) => true;
 
+    public virtual void IsInVent() { }
+
     /// <summary>
-    /// ミーティングが始まった時に呼ばれる関数
+    /// Called when a player exits a vent
     /// </summary>
+    /// <param name="player"></param>
+    /// <param name="ventId"></param>
     public virtual void OnStartMeeting()
     { }
 
