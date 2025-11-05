@@ -414,6 +414,7 @@ public enum CustomRoles
     Seer,
     TimeManager,
     Magician,
+    Visionary,
     //Neutral
     Arsonist,
     Egoist,

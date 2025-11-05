@@ -43,10 +43,6 @@
       "RelativeMoniker": "D:0:0:{1FC72121-C82A-F097-6BE3-3B951E5B6959}|TheDarkRoles.csproj|solutionrelative:patches\\gamemanagerpatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FC72121-C82A-F097-6BE3-3B951E5B6959}|TheDarkRoles.csproj|c:\\users\\host\\documents\\github\\the-dark-roles\\helpers\\ienumeratorhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FC72121-C82A-F097-6BE3-3B951E5B6959}|TheDarkRoles.csproj|solutionrelative:helpers\\ienumeratorhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1FC72121-C82A-F097-6BE3-3B951E5B6959}|TheDarkRoles.csproj|c:\\users\\host\\documents\\github\\the-dark-roles\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FC72121-C82A-F097-6BE3-3B951E5B6959}|TheDarkRoles.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -148,22 +144,9 @@
               "RelativeDocumentMoniker": "Modules\\Utils.cs",
               "ToolTip": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Modules\\Utils.cs",
               "RelativeToolTip": "Modules\\Utils.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAQwIMAAAB8AAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAIMAAAB8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-08T10:06:57.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IEnumeratorHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Helpers\\IEnumeratorHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\IEnumeratorHelper.cs",
-              "ToolTip": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Helpers\\IEnumeratorHelper.cs",
-              "RelativeToolTip": "Helpers\\IEnumeratorHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T08:41:08.009Z",
               "EditorCaption": ""
             },
             {
@@ -272,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "Snitch.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Roles\\Crewmate\\Snitch.cs",
               "RelativeDocumentMoniker": "Roles\\Crewmate\\Snitch.cs",
@@ -285,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "Lighter.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Roles\\Crewmate\\Lighter.cs",
               "RelativeDocumentMoniker": "Roles\\Crewmate\\Lighter.cs",
@@ -298,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "ControlPatch.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Patches\\ControlPatch.cs",
               "RelativeDocumentMoniker": "Patches\\ControlPatch.cs",
@@ -311,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "string.csv",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Resources\\string.csv",
               "RelativeDocumentMoniker": "Resources\\string.csv",
@@ -324,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "MainMenuManagerPatch.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Patches\\MainMenuManagerPatch.cs",
               "RelativeDocumentMoniker": "Patches\\MainMenuManagerPatch.cs",
@@ -337,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "ClientPatch.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Patches\\ClientPatch.cs",
               "RelativeDocumentMoniker": "Patches\\ClientPatch.cs",
@@ -350,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "IntroPatch.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Patches\\IntroPatch.cs",
               "RelativeDocumentMoniker": "Patches\\IntroPatch.cs",
@@ -376,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "RPC.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Modules\\RPC.cs",
               "RelativeDocumentMoniker": "Modules\\RPC.cs",
@@ -389,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "Agent.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Roles\\Neutral\\Agent.cs",
               "RelativeDocumentMoniker": "Roles\\Neutral\\Agent.cs",
@@ -402,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "ChatControlPatch.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Patches\\ChatControlPatch.cs",
               "RelativeDocumentMoniker": "Patches\\ChatControlPatch.cs",
@@ -415,7 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "Arsonist.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Roles\\Neutral\\Arsonist.cs",
               "RelativeDocumentMoniker": "Roles\\Neutral\\Arsonist.cs",
@@ -428,7 +411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "ChatCommandPatch.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Patches\\ChatCommandPatch.cs",
               "RelativeDocumentMoniker": "Patches\\ChatCommandPatch.cs",
@@ -441,7 +424,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 27,
               "Title": "ImGuiRenderHelper.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Modules\\ImGuiRenderHelper.cs",
               "RelativeDocumentMoniker": "Modules\\ImGuiRenderHelper.cs",
@@ -454,7 +437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "main.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\main.cs",
               "RelativeDocumentMoniker": "main.cs",
@@ -467,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "HostFunctions.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Modules\\HostFunctions.cs",
               "RelativeDocumentMoniker": "Modules\\HostFunctions.cs",
@@ -480,7 +463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "ImGuiPatch.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Patches\\ImGuiPatch.cs",
               "RelativeDocumentMoniker": "Patches\\ImGuiPatch.cs",
@@ -493,7 +476,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "AURoleOptions.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Modules\\AURoleOptions.cs",
               "RelativeDocumentMoniker": "Modules\\AURoleOptions.cs",
@@ -506,7 +489,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "ConstantsPatch.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Patches\\ConstantsPatch.cs",
               "RelativeDocumentMoniker": "Patches\\ConstantsPatch.cs",
@@ -519,7 +502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 28,
               "Title": "TheDarkRoles.csproj",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\TheDarkRoles.csproj",
               "RelativeDocumentMoniker": "TheDarkRoles.csproj",
@@ -532,7 +515,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\README.md",
               "RelativeDocumentMoniker": "README.md",
@@ -545,7 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "Translator.cs",
               "DocumentMoniker": "C:\\Users\\Host\\Documents\\GitHub\\The-Dark-Roles\\Modules\\Translator.cs",
               "RelativeDocumentMoniker": "Modules\\Translator.cs",

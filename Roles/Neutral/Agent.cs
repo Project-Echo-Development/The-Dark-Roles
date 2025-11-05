@@ -37,7 +37,7 @@ namespace TheDarkRoles.Roles.Neutral
         {
             MarkCooldown = FloatOptionItem.Create(RoleInfo, 11, GetString("AgentMarkCooldown"), new(5f, 100f, 1f), 10f, false)
             .SetValueFormat(OptionFormat.Seconds);
-            CanVent = BooleanOptionItem.Create(RoleInfo, 12, GetString("AgentCanVent"), true, false); 
+            CanVent = BooleanOptionItem.Create(RoleInfo, 12, GetString("AgentCanVent"), true, false);
         }
 
         public static Dictionary<byte, bool> Marked;
@@ -64,7 +64,7 @@ namespace TheDarkRoles.Roles.Neutral
             {
                 foreach (var player in Main.AllPlayerControls)
                 {
-                    if (Marked.ContainsKey(player.PlayerId) && player.PlayerId != Player.PlayerId)
+                    if (Marked[player.PlayerId] && player.PlayerId != Player.PlayerId)
                     {
                         player.SetRealKiller(Player);
                         player.RpcMurderPlayer(player);
@@ -72,7 +72,7 @@ namespace TheDarkRoles.Roles.Neutral
                         state.DeathReason = CustomDeathReason.Hit;
                         state.SetDead();
                         Marked.Clear();
-                    } 
+                    }
                 }
             }
         }
