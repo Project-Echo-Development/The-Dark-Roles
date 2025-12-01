@@ -9,7 +9,7 @@
 
 ## <span style="color: #D57DFF;">🧩 Mod Version</span>
 
-**The Dark Roles** mod supports **Among Us** versions **v16.0.2s** and up.
+**The Dark Roles** mod supports **Among Us** versions **v17.1s** and up.
 
 ---
 

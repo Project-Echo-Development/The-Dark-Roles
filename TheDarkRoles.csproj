@@ -19,12 +19,14 @@
   </ItemGroup>
     
   <ItemGroup>
-    <PackageReference Include="AmongUs.GameLibs.Steam" Version="2025.4.15" />
-    <PackageReference Include="BepInEx.IL2CPP.MSBuild" Version="2.0.1">
+    <PackageReference Include="AmongUs.GameLibs.Steam" Version="2025.11.18" />
+    <PackageReference Include="BepInEx.IL2CPP.MSBuild" Version="2.1.0-rc.1" >
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.668" />
+	<PackageReference Include="Il2CppInterop.Generator" Version="1.4.6-ci.354">
+	</PackageReference>
+    <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.670" />
     <PackageReference Include="Costura.Fody" Version="5.7.0">
       <IncludeAssets>runtime; compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
