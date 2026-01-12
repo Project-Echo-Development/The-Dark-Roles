@@ -14,7 +14,7 @@ namespace TheDarkRoles
     [HarmonyPatch]
     public class ModUpdater
     {
-        private static readonly string URL = "https://api.github.com/repos/The-Project-Echo/The-Dark-Roles";
+        private static readonly string URL = "https://api.github.com/repos/Project-Echo-Development/The-Dark-Roles";
         public static bool hasUpdate = false;
         public static bool isBroken = false;
         public static bool isChecked = false;

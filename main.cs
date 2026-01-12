@@ -1,7 +1,3 @@
-#if UNITY_EDITOR
-[assembly: UnityEngine.Scripting.Preserve]
-#endif
-
 using System;
 using System.Collections.Generic;
 using System.Linq;

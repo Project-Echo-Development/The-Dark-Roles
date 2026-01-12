@@ -20,7 +20,12 @@
     
   <ItemGroup>
     <PackageReference Include="AmongUs.GameLibs.Steam" Version="2025.11.18" />
-    <PackageReference Include="BepInEx.IL2CPP.MSBuild" Version="2.1.0-rc.1" >
+    <PackageReference Include="BepInEx.IL2CPP" Version="6.0.0-pre.1" />
+    <PackageReference Include="BepInEx.IL2CPP.MSBuild" Version="2.1.0-rc.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="GitInfo" Version="3.6.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -32,10 +37,6 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="csv" Version="2.0.87" />
-    <PackageReference Include="GitInfo" Version="2.0.20">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
     <PackageReference Include="ImGui.NET" Version="1.91.6.1" />
   </ItemGroup>
 
