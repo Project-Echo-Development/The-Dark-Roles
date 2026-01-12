@@ -20,21 +20,14 @@ namespace TheDarkRoles.Modules
         private readonly string[] colorOptions = { "Red", "Blue", "Green", "Pink", "Orange", "Yellow", "Black", "White",
         "Purple", "Brown", "Cyan", "Lime", "Maroon", "Rose", "Banana", "Gray", "Tan", "Coral"};
         private string colorChanger = "Color Changer";
-        private GUIContent[] cachedColorOptions;
         private Texture2D buttonTexture;
         private Texture2D hoveredButtonTexture;
         private Texture2D boxTexture;
         private Texture2D sepTexture;
         private Texture2D labelTexture;
         private Texture2D windowTexture;
-        private GUIStyle cachedbuttonStyle;
-        private string[] prevColorOptions;
-        private bool refresh = true;
         public static bool showMenu;
         private bool _showDropdown;
-        private Vector2 scrollPos;
-        private int selectedIndex;
-        private IntPtr context;
 
         void Awake()
         {
