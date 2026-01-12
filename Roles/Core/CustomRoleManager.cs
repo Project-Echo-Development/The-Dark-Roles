@@ -389,6 +389,7 @@ public enum CustomRoles
     NekoKabocha,
     EvilHacker,
     Insider,
+    Grappler,
     //Madmate
     MadGuardian,
     Madmate,
@@ -415,6 +416,7 @@ public enum CustomRoles
     TimeManager,
     Magician,
     Visionary,
+    Aware,
     //Neutral
     Arsonist,
     Egoist,

@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using AmongUs.GameOptions;
+using DarkRoles.Modules;
 using HarmonyLib;
 using Hazel;
 
@@ -23,6 +24,7 @@ namespace TheDarkRoles
         SetLoversPlayers,
         SetRealKiller,
         CustomRoleSync,
+        SyncNameNotify,
     }
     public enum Sounds
     {
@@ -142,6 +144,9 @@ namespace TheDarkRoles
                     break;
                 case CustomRPC.CustomRoleSync:
                     CustomRoleManager.DispatchRpc(reader);
+                    break;
+                case CustomRPC.SyncNameNotify:
+                    NameNotifyManager.ReceiveRPC(reader);
                     break;
             }
         }

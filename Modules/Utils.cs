@@ -28,6 +28,7 @@ namespace TheDarkRoles
 {
     public static class Utils
     {
+        private static readonly DateTime timeStampStartTime = new(1970, 1, 1, 0, 0, 0, DateTimeKind.Local);
         public static bool IsActive(SystemTypes type)
         {
             // ないものはfalse
@@ -1071,6 +1072,9 @@ namespace TheDarkRoles
             }
             return Color.white;
         }
+
+        public static long GetTimeStamp(DateTime? dateTime = null) => (long)((dateTime ?? DateTime.Now).ToUniversalTime() - timeStampStartTime).TotalSeconds;
+
 
         private static string ColorToHex(Color color)
         {

@@ -1,6 +1,5 @@
-bin/
-obj/
-bin/
-FodyWeavers.xsd
-.vs/
 /.vs
+/bin
+/obj
+/.editorconfig
+FodyWeavers.xsd

@@ -277,6 +277,7 @@ namespace TheDarkRoles
         Disconnected,
         Fall,
         Hit,
+        CaughtLacking,
         etc = -1
     }
     //WinData

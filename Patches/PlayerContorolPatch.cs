@@ -335,6 +335,8 @@ namespace TheDarkRoles
 
             if (!shapeshifting) Camouflage.RpcSetSkin(__instance);
 
+            shapeshifter.GetRoleClass()?.OnShapeshift(shapeshifter, target, shapeshifting);
+
             //変身解除のタイミングがずれて名前が直せなかった時のために強制書き換え
             if (!shapeshifting)
             {
