@@ -58,7 +58,7 @@ namespace TheDarkRoles
         public const string PluginGuid = "team.projectecho.thedarkroles";
         public const string PluginVersion = "1.0.0";
         // サポートされている最低のAmongUsバージョン
-        public static readonly string LowestSupportedVersion = "2025.3.25";
+        public static readonly string LowestSupportedVersion = "2025.9.9";
         // このバージョンのみで公開ルームを無効にする場合
         public static readonly bool IsPublicAvailableOnThisVersion = true;
         // プレリリースかどうか
