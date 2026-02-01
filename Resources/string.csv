@@ -38,6 +38,7 @@
 "Magician","Magician"
 "Visionary","Visionary"
 "Aware","Aware"
+"For","for"
 
 "# Neutral Roles"
 "Jester","Jester"
@@ -123,6 +124,7 @@
 "MagicianInfo","Now you see me now you dont"
 "VisionaryInfo","Reveal roles"
 "AwareInfo","Guess the kiler for protection"
+"ForInfo","Youre basically temu god"
 
 "# Neutral Roles Info"
 "ArsonistInfo","Burn them to crisps"
@@ -189,6 +191,7 @@
 "MagicianInfoLong","The Magician can jump into a vent to pop out at a random vent. This can be useful for escaping the killer(s)."
 "VisionaryInfoLong","Your job as the Visionary is to use your kill button to mark a player for role reveal. When the meeting starts, you'll be either notified of your target's role or that your vision failed. womp womp."
 "AwareInfoLong","When you vote someone in the meeting, the next round you'll be protected from them. If they try to kill you they'll be caught lacking."
+"ForInfoLong","for is god of the dark roles. You get multiple lives to survive the killer. You have more votes to overpower decisions. You can vent to travel the map or catch a murder. You run faster because why not.\n\nThis role is a suggestion by editnamehere from my discord!"
 
 "# Neutral Roles Info Long"
 "ArsonistInfoLong","When you use the kill button, you douse your target in oil.\nAfter dousing all living players, you set everything ablaze and win by venting."
@@ -421,6 +424,8 @@
 "VisionaryChance","Vision Chance"
 "CaptainAbilityUses","Ability Uses"
 "CaptainCaptainDies","Captain Dies"
+"ForLives","Lives"
+"ForVotes","Votes"
 
 "# Neutral Role Settings"
 "CanBeforeSchrodingerCatWinTheCrewmate","Can Win With Crewmates If No Team"

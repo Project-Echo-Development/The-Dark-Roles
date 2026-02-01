@@ -27,17 +27,11 @@ namespace TheDarkRoles.Roles.Neutral
         public static Dictionary<byte, bool> SwapSelected = [];
         public static OptionItem CanVent;
 
-        static Trickster()
-        {
-            CustomRoleManager.OnMurderPlayerOthers.Add(OnAnyMurder);
-        }
+        static Trickster() => CustomRoleManager.OnMurderPlayerOthers.Add(OnAnyMurder);
 
         public Trickster(PlayerControl player) : base(RoleInfo, player, () => HasTask.False) { }
 
-        public static void SetupOptionItem()
-        {
-            CanVent = BooleanOptionItem.Create(RoleInfo, 12, "TricksterCanVent", true, false);
-        }
+        public static void SetupOptionItem() => CanVent = BooleanOptionItem.Create(RoleInfo, 12, "TricksterCanVent", true, false);
 
         public void OnCheckMurderAsKiller(MurderInfo info)
         {

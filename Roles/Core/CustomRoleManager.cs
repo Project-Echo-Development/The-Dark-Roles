@@ -419,6 +419,7 @@ public enum CustomRoles
     Magician,
     Visionary,
     Aware,
+    For,
     //Neutral
     Arsonist,
     Egoist,
