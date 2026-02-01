@@ -48,7 +48,10 @@ namespace TheDarkRoles.Roles.Neutral
         {
             var (killer, target) = info.AttemptTuple;
             if (!IsMarked(target.PlayerId) && target is not null)
+            {
                 Marked[target.PlayerId] = true;
+                Utils.NotifyRoles();
+            }
             info.DoKill = false;
         }
 
@@ -66,6 +69,7 @@ namespace TheDarkRoles.Roles.Neutral
                         state.DeathReason = CustomDeathReason.Hit;
                         state.SetDead();
                         Marked.Clear();
+                        Utils.NotifyRoles();
                     }
                 }
             }
