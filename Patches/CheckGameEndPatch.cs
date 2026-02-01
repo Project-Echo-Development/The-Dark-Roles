@@ -175,39 +175,35 @@ namespace TheDarkRoles
 
             public bool CheckGameEndByLivingPlayers(out GameOverReason reason)
             {
-                reason = GameOverReason.ImpostorsByKill;
+                int imp = Utils.AlivePlayersCount(CountTypes.Impostor);
+                int jackal = Utils.AlivePlayersCount(CountTypes.Jackal);
+                int crew = Utils.AlivePlayersCount(CountTypes.Crew);
+                int agent = Utils.AlivePlayersCount(CountTypes.Agent);
 
-                int Imp = Utils.AlivePlayersCount(CountTypes.Impostor);
-                int Jackal = Utils.AlivePlayersCount(CountTypes.Jackal);
-                int Crew = Utils.AlivePlayersCount(CountTypes.Crew);
+                if (imp == 0 && jackal == 0 && crew == 0 && agent == 0)
+                    return CheckWin(out reason, GameOverReason.ImpostorsByKill, CustomWinner.None);
+                if (Main.AllAlivePlayerControls.All(p => p.Is(CustomRoles.Lovers)))
+                    return CheckWin(out reason, GameOverReason.ImpostorsByKill, CustomWinner.Lovers);
+                if (jackal == 0 && agent == 0 && crew <= imp)
+                    return CheckWin(out reason, GameOverReason.ImpostorsByKill, CustomWinner.Impostor);
+                if (imp == 0 && agent == 0 && crew <= jackal)
+                    return CheckWin(out reason, GameOverReason.ImpostorsByKill, CustomWinner.Jackal, CustomRoles.Jackal);
+                if (imp == 0 && jackal == 0 && agent == 0)
+                    return CheckWin(out reason, GameOverReason.CrewmatesByVote, CustomWinner.Crewmate);
+                if (imp == 0 && jackal == 0 && crew <= agent)
+                    return CheckWin(out reason, GameOverReason.ImpostorsByKill, CustomWinner.Agent, CustomRoles.Agent);
 
-                if (Imp == 0 && Crew == 0 && Jackal == 0) //全滅
-                {
-                    reason = GameOverReason.ImpostorsByKill;
-                    CustomWinnerHolder.ResetAndSetWinner(CustomWinner.None);
-                }
-                else if (Main.AllAlivePlayerControls.All(p => p.Is(CustomRoles.Lovers))) //ラバーズ勝利
-                {
-                    reason = GameOverReason.ImpostorsByKill;
-                    CustomWinnerHolder.ResetAndSetWinner(CustomWinner.Lovers);
-                }
-                else if (Jackal == 0 && Crew <= Imp) //インポスター勝利
-                {
-                    reason = GameOverReason.ImpostorsByKill;
-                    CustomWinnerHolder.ResetAndSetWinner(CustomWinner.Impostor);
-                }
-                else if (Imp == 0 && Crew <= Jackal) //ジャッカル勝利
-                {
-                    reason = GameOverReason.ImpostorsByKill;
-                    CustomWinnerHolder.ResetAndSetWinner(CustomWinner.Jackal);
-                    CustomWinnerHolder.WinnerRoles.Add(CustomRoles.Jackal);
-                }
-                else if (Jackal == 0 && Imp == 0) //クルー勝利
-                {
-                    reason = GameOverReason.CrewmatesByVote;
-                    CustomWinnerHolder.ResetAndSetWinner(CustomWinner.Crewmate);
-                }
-                else return false; //勝利条件未達成
+                reason = default;
+                return false;
+            }
+
+            private bool CheckWin(out GameOverReason reason, GameOverReason gameOverReason, CustomWinner winner, CustomRoles? extraRole = null)
+            {
+                reason = gameOverReason;
+                CustomWinnerHolder.ResetAndSetWinner(winner);
+
+                if (extraRole.HasValue)
+                    CustomWinnerHolder.WinnerRoles.Add(extraRole.Value);
 
                 return true;
             }

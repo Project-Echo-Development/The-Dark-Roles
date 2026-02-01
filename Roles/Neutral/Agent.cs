@@ -1,13 +1,7 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AmongUs.GameOptions;
 using TheDarkRoles.Roles.Core;
 using TheDarkRoles.Roles.Core.Interfaces;
-using TMPro;
-using static TheDarkRoles.Translator;
 
 namespace TheDarkRoles.Roles.Neutral
 {
@@ -25,6 +19,7 @@ namespace TheDarkRoles.Roles.Neutral
             "ag",
             "#ff6633",
             true,
+            countType: CountTypes.Agent,
             introSound: () => GetIntroSound(RoleTypes.Crewmate)
         );
 
@@ -35,9 +30,8 @@ namespace TheDarkRoles.Roles.Neutral
 
         public static void SetupOptionItem()
         {
-            MarkCooldown = FloatOptionItem.Create(RoleInfo, 11, GetString("AgentMarkCooldown"), new(5f, 100f, 1f), 10f, false)
-            .SetValueFormat(OptionFormat.Seconds);
-            CanVent = BooleanOptionItem.Create(RoleInfo, 12, GetString("AgentCanVent"), true, false);
+            MarkCooldown = FloatOptionItem.Create(RoleInfo, 11, "AgentMarkCooldown", new(5f, 100f, 1f), 10f, false).SetValueFormat(OptionFormat.Seconds);
+            CanVent = BooleanOptionItem.Create(RoleInfo, 12, "AgentCanVent", true, false);
         }
 
         public static Dictionary<byte, bool> Marked;
@@ -81,7 +75,7 @@ namespace TheDarkRoles.Roles.Neutral
         {
             seen ??= seer;
             if (IsMarked(seen.PlayerId))
-                return Utils.ColorString(RoleInfo.RoleColor, "󰓾");
+                return Utils.ColorString(RoleInfo.RoleColor, "⦿");
             return "";
         }
 

@@ -278,6 +278,7 @@ namespace TheDarkRoles
         Fall,
         Hit,
         CaughtLacking,
+        TricksterSwap,
         etc = -1
     }
     //WinData
@@ -297,6 +298,7 @@ namespace TheDarkRoles
         Jackal = CustomRoles.Jackal,
         PlagueDoctor = CustomRoles.PlagueDoctor,
         HASTroll = CustomRoles.HASTroll,
+        Agent = CustomRoles.Agent,
     }
     /*public enum CustomRoles : byte
     {

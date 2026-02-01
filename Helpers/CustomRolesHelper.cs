@@ -150,5 +150,6 @@ namespace TheDarkRoles
         Crew,
         Impostor,
         Jackal,
+        Agent,
     }
 }

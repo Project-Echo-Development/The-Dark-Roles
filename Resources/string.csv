@@ -50,6 +50,7 @@
 "Jackal","Jackal"
 "PlagueDoctor","Plague Doctor"
 "Agent","Agent"
+"Trickster","Trickster"
 
 "# Impostor Roles"
 "BountyHunter","Bounty Hunter"
@@ -139,7 +140,7 @@
 "JackalInfo","Kill Everyone"
 "PlagueDoctorInfo","Spread disease to wipe out the crew"
 "AgentInfo","It's not personal. It's just business."
-"GrapplerInfo","Grapple players by shifting"
+"TricksterInfo","Swap your death with someone else"
 
 "# Impostor Roles Info"
 "BountyHunterInfo","Eliminate your target"
@@ -163,6 +164,7 @@
 "EvilHackerInfo","Hack systems"
 "PenguinInfo","Let's drag and kill!"
 "InsiderInfo","Knowledge is power"
+"GrapplerInfo","Grapple players by shifting"
 
 "# Madmade Roles Info Long"
 "MadmateInfoLong","You are a crewmate, but you act as the impostors' ally.\nYou and the impostors cannot recognize each other.\nYou can vent, and you have no tasks."
@@ -177,7 +179,7 @@
 "SabotageMasterInfoLong","You can Fix Reactors, O2, Communications by yourself.\nLights can be fixed with the flick of one switch.\nOpening a door will open all doors to that room."
 "SheriffInfoLong","You can kill anyone on Team Impostors.\nThe ability to kill Neutrals is a configurable setting.\nIf you try to kill a crew, you will kill yourself instead. You have no tasks."
 "SnitchInfoLong","Once you finish all your tasks, the Impostors' names will be displayed in red to you.\nWhen you have only one task left, a ★ mark will be displayed next to your name and you will be exposed to the Impostors."
-"LoversInfoLong","(Neutrals):\nLovers is an additional Neutrals role assigned to 2 random players on top of their defined roles.\nIf you and your lover both survive til the end, you both will win.\nIf one of you dies, the other will also die. If crewmates get a task victory, you both will lose."
+"LoversInfoLong","(Lovers):\nLovers is an additional Neutrals role assigned to 2 random players on top of their defined roles.\nIf you and your lover both survive til the end, you both will win.\nIf one of you dies, the other will also die. If crewmates get a task victory, you both will lose."
 "SpeedBoosterInfoLong","Once you finish your tasks, a random living player will get a speed boost."
 "DoctorInfoLong","You can see the cause of death for all players.\nIn addition, you can access vitals wherever you are while you still have battery."
 "TrapperInfoLong","When you are killed, you immobilize your killer for a configurable amount of time."
@@ -199,6 +201,7 @@
 "JackalInfoLong","Jackal can kill all Crewmates, Impostors and Neutrals.\nTeam Jackal wins when living Jackal outnumbers living Crewmates and when there are no Impostors alive."
 "PlagueDoctorInfoLong","The Plague Doctor's goal is to infect every living player.\nThey start by choosing one player to infect, after which anyone who spends a set\namount of time in range of the infected player becomes infected themselves.\nInfection progress is cumulative, and does not reset with distance or after meetings."
 "AgentInfoLong","As the Agent, your job is to mark players to hit. When a meeting is called those players have a chance to die."
+"TricksterInfoLong","The Trickster is a neutral chaos role who can select any 1 player per game to swap their death with. When you die, the selected player will die instead."
 
 "# Impostor Roles Info Long"
 "BountyHunterInfoLong","If you kill your indicated target, your next kill cooldown will be greatly reduced.\nIf you kill anyone other than your target, your next kill cooldown will increase.\nThe target swaps after a configurable amount of time."
@@ -430,6 +433,7 @@
 "CanTerroristSuicideWin","Can Win By Suicide"
 "AgentMarkCooldown","Mark Cooldown"
 "AgentCanVent","Can Vent?"
+"TricksterCanVent","Can Vent?"
 
 "# Impostor Role Settings"
 "BountyTargetChangeTime","Time Until Target Swaps"
@@ -558,6 +562,7 @@
 "DeathReason.Infected","Infected"
 "DeathReason.etc","Other"
 "DeathReason.CaughtLacking","Caught Lacking"
+"DeathReason.TricksterSwap","Trickster Swap"
 "Alive","Alive"
 "Win"," Wins"
 "Last-","Last "

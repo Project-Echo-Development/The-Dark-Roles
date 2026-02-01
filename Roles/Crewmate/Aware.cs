@@ -1,8 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AmongUs.GameOptions;
 using TheDarkRoles.Roles.Core;
 
@@ -25,7 +21,7 @@ namespace TheDarkRoles.Roles.Crewmate
             "#85ffda"
         );
 
-        public Aware(PlayerControl player) : base(RoleInfo, player) {}
+        public Aware(PlayerControl player) : base(RoleInfo, player) { }
 
         public override void Add() => Target.Clear();
 
