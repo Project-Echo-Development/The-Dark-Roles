@@ -30,18 +30,8 @@ namespace TheDarkRoles.Roles.AddOns.Crewmate
                 .SetValueFormat(OptionFormat.Pieces);
         }
         [GameModuleInitializer]
-        public static void Init()
-        {
-            playerIdList = new();
-
-            AssignOnlyToCrewmate = OptionAssignOnlyToCrewmate.GetBool();
-            NumLongTasks = OptionNumLongTasks.GetInt();
-            NumShortTasks = OptionNumShortTasks.GetInt();
-        }
-        public static void Add(byte playerId)
-        {
-            playerIdList.Add(playerId);
-        }
+        public static void Init() => playerIdList = [];
+        public static void Add(byte playerId) => playerIdList.Add(playerId);
         public static bool IsEnable => playerIdList.Count > 0;
         public static bool IsThisRole(byte playerId) => playerIdList.Contains(playerId);
         public static (bool, int, int) TaskData => (false, NumLongTasks, NumShortTasks);

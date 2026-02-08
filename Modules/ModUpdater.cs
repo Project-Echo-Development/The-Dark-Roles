@@ -26,17 +26,49 @@ namespace TheDarkRoles
         [HarmonyPatch(typeof(MainMenuManager), nameof(MainMenuManager.Start)), HarmonyPostfix, HarmonyPriority(Priority.LowerThanNormal)]
         public static void StartPostfix()
         {
-            DeleteOldDLL();
-            InfoPopup = UnityEngine.Object.Instantiate(Twitch.TwitchManager.Instance.TwitchPopup);
-            InfoPopup.name = "InfoPopup";
-            InfoPopup.TextAreaTMP.GetComponent<RectTransform>().sizeDelta = new(2.5f, 2f);
-            if (!isChecked)
+            new LateTask(() =>
             {
-                CheckRelease(Main.BetaBuildURL.Value != "").GetAwaiter().GetResult();
-            }
-            MainMenuManagerPatch.UpdateButton.Button.gameObject.SetActive(hasUpdate);
-            MainMenuManagerPatch.UpdateButton.Button.transform.Find("FontPlacer/Text_TMP").GetComponent<TMPro.TMP_Text>().SetText($"{GetString("updateButton")}\n{latestTitle}");
+                DeleteOldDLL();
+                InitUpdater();
+            }, 0.2f);
         }
+
+        public static void InitUpdater()
+        {
+            if (Twitch.TwitchManager.Instance == null) return;
+            if (Twitch.TwitchManager.Instance.TwitchPopup == null) return;
+
+            InfoPopup = UnityEngine.Object.Instantiate(
+                Twitch.TwitchManager.Instance.TwitchPopup);
+
+            InfoPopup.name = "InfoPopup";
+
+            if (InfoPopup.TextAreaTMP != null)
+            {
+                var rt = InfoPopup.TextAreaTMP.GetComponent<RectTransform>();
+                if (rt != null)
+                    rt.sizeDelta = new(2.5f, 2f);
+            }
+
+            if (!isChecked && Main.BetaBuildURL != null)
+            {
+                _ = CheckRelease(Main.BetaBuildURL.Value != "");
+            }
+
+            if (MainMenuManagerPatch.UpdateButton?.Button == null)
+                return;
+
+            var btn = MainMenuManagerPatch.UpdateButton.Button;
+            btn.gameObject.SetActive(hasUpdate);
+
+            var text = btn.transform
+                .Find("FontPlacer/Text_TMP")
+                ?.GetComponent<TMPro.TMP_Text>();
+
+            if (text != null)
+                text.SetText($"{GetString("updateButton")}\n{latestTitle}");
+        }
+
         public static async Task<bool> CheckRelease(bool beta = false)
         {
             string url = beta ? Main.BetaBuildURL.Value : URL + "/releases/latest";

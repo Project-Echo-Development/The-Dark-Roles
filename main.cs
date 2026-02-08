@@ -28,6 +28,8 @@ namespace TheDarkRoles
         // == プログラム設定 / Program Config ==
         // modの名前 / Mod Name (Default: Town Of Host)
         public static readonly string ModName = "The Dark Roles";
+        public static readonly bool IsBetaBuild = true;
+        public static readonly byte BetaBuildNumber = 1;
         // modの色 / Mod Color (Default: #00bfff)
         public static readonly string ModColor = "#D57DFF";
         public static readonly string ModColor2 = "#D5C7FF";
@@ -216,6 +218,10 @@ namespace TheDarkRoles
                     {CustomRoles.LastImpostor, "#ff1919"},
                     {CustomRoles.Lovers, "#ff6be4"},
                     {CustomRoles.Watcher, "#800080"},
+                    {CustomRoles.Flash, "#fabf78"},
+                    {CustomRoles.Sloth, "#658a94"},
+                    {CustomRoles.Wise, "#4e9bed"},
+                    {CustomRoles.Bait, "#00f7ff"},
                     {CustomRoles.Workhorse, "#00ffff"},
 
                     {CustomRoles.NotAssigned, "#ffffff"}

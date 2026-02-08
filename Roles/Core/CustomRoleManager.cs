@@ -9,6 +9,7 @@ using AmongUs.GameOptions;
 using TheDarkRoles.Attributes;
 using TheDarkRoles.Roles.Core.Interfaces;
 using TheDarkRoles.Roles.AddOns.Common;
+using TheDarkRoles.Roles.AddOns.Crewmate;
 
 namespace TheDarkRoles.Roles.Core;
 
@@ -125,6 +126,13 @@ public static class CustomRoleManager
         if (targetRole != null)
             targetRole.OnMurderPlayerAsTarget(info);
 
+        switch (attemptTarget.GetCustomRole())
+        {
+            case CustomRoles.Bait:
+                Bait.OnBaitDeath(info);
+                break;
+        }
+
         //その他視点の処理があれば実行
         foreach (var onMurderPlayer in OnMurderPlayerOthers.ToArray())
         {
@@ -233,6 +241,15 @@ public static class CustomRoleManager
             {
                 case CustomRoles.Watcher:
                     Watcher.Add(pc.PlayerId);
+                    break;
+                case CustomRoles.Flash:
+                    Flash.Add(pc.PlayerId);
+                    break;
+                case CustomRoles.Sloth:
+                    Sloth.Add(pc.PlayerId);
+                    break;
+                case CustomRoles.Wise:
+                    Wise.Add(pc.PlayerId);
                     break;
             }
         }
@@ -404,7 +421,6 @@ public enum CustomRoles
     Noisemaker,
     Detective,
     //Crewmate
-    Bait,
     Lighter,
     Mayor,
     SabotageMaster,
@@ -443,6 +459,10 @@ public enum CustomRoles
     Lovers,
     Watcher,
     Workhorse,
+    Flash,
+    Sloth,
+    Wise,
+    Bait,
 }
 public enum CustomRoleTypes
 {

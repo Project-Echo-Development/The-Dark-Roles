@@ -10,7 +10,7 @@ namespace TheDarkRoles.Roles.AddOns.Common
     {
         private static readonly int Id = 80200;
         private static Color RoleColor = Utils.GetRoleColor(CustomRoles.Watcher);
-        public static string SubRoleMark = Utils.ColorString(RoleColor, "Ｗ");
+        public static string SubRoleMark = Utils.ColorString(RoleColor, "(Watcher)");
         private static List<byte> playerIdList = new();
 
         public static void SetupCustomOption()
@@ -19,16 +19,9 @@ namespace TheDarkRoles.Roles.AddOns.Common
             AddOnsAssignData.Create(Id + 10, CustomRoles.Watcher, true, true, true);
         }
         [GameModuleInitializer]
-        public static void Init()
-        {
-            playerIdList = new();
-        }
-        public static void Add(byte playerId)
-        {
-            playerIdList.Add(playerId);
-        }
+        public static void Init() => playerIdList = [];
+        public static void Add(byte playerId) => playerIdList.Add(playerId);
         public static bool IsEnable => playerIdList.Count > 0;
         public static bool IsThisRole(byte playerId) => playerIdList.Contains(playerId);
-
     }
 }

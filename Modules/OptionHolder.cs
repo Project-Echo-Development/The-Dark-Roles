@@ -433,6 +433,10 @@ namespace TheDarkRoles
             SetupRoleOptions(50300, TabGroup.Addons, CustomRoles.Lovers, Utils.GetRoleColor(CustomRoles.Lovers), assignCountRule: new(2, 2, 2));
             LastImpostor.SetupCustomOption();
             Watcher.SetupCustomOption();
+            Wise.SetupCustomOption();
+            Sloth.SetupCustomOption();
+            Flash.SetupCustomOption();
+            Bait.SetupCustomOption();
             Workhorse.SetupCustomOption();
             #endregion
 

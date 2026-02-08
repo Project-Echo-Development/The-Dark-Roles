@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using HarmonyLib;
+using Il2CppSystem.Net;
 using TheDarkRoles.Templates;
 using UnityEngine;
 
@@ -24,20 +25,10 @@ namespace TheDarkRoles
         [HarmonyPatch(nameof(MainMenuManager.Start)), HarmonyPostfix, HarmonyPriority(Priority.Normal)]
         public static void StartPostfix(MainMenuManager __instance)
         {
-            if (template == null) template = __instance.quitButton;
-
-            // FPS
-            Application.targetFrameRate = 165;
-
-            if (template == null) return;
-
-            var howToPlayButton = __instance.howToPlayButton;
-            var freeplayButton = howToPlayButton.transform.parent.Find("FreePlayButton");
-
-            if (freeplayButton != null) freeplayButton.gameObject.SetActive(false);
-
-            howToPlayButton.transform.SetLocalX(0);
-
+            new LateTask(() =>
+            {
+                TryFixMainMenu(__instance);
+            }, 0.1f);
         }
 
         /// <summary>TOHロゴの子としてボタンを生成</summary>
@@ -232,6 +223,27 @@ namespace TheDarkRoles
             __instance.creditsButton.activeTextColor = Color.white;
             __instance.creditsButton.inactiveTextColor = Color.white;
             __instance.creditsButton.inactiveTextColor = Color.white;
+        }
+
+        public static void TryFixMainMenu(MainMenuManager __instance, int retries = 3)
+        {
+            var howToPlayButton = __instance.howToPlayButton;
+            if (howToPlayButton == null)
+            {
+                if (retries > 0)
+                    new LateTask(() => TryFixMainMenu(__instance, retries - 1), 0.1f);
+                return;
+            }
+
+            Application.targetFrameRate = 165;
+
+            var parent = howToPlayButton.transform.parent;
+            var freeplayButton = parent.Find("FreePlayButton");
+
+            if (parent == null) return;
+            if (freeplayButton != null) freeplayButton.gameObject.SetActive(false);
+
+            howToPlayButton.transform.SetLocalX(0);
         }
     }
 }

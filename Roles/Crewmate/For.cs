@@ -50,7 +50,7 @@ namespace TheDarkRoles.Roles.Crewmate
             return (votedForId, numVotes, doVote);
         }
 
-        public override void OnFixedUpdate(PlayerControl player) => Main.AllPlayerSpeed[player.PlayerId] *= 1.333f;
+        public static void ApplySpeed(PlayerControl player) => Main.AllPlayerSpeed[player.PlayerId] *= 1.333f;
 
         public override string GetProgressText(bool comms = false) => Utils.ColorString(Utils.GetRoleColor(CustomRoles.For), $"♥ {Lives[Player.PlayerId]}");
 

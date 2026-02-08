@@ -67,7 +67,7 @@ namespace TheDarkRoles
             {
                 TMPTemplate.SetBase(__instance.text);
                 var echo = Utils.GradientColorText(Main.ModColorNoTag, Main.ModColor2NoTag, "Project Echo") + " Development";
-                var name = Utils.GradientColorText(Main.ModColorNoTag, Main.ModColor2NoTag, Main.ModName) + " " + Main.PluginVersion;
+                var name = Utils.GradientColorText(Main.ModColorNoTag, Main.ModColor2NoTag, Main.ModName) + " " + Main.PluginVersion + (Main.IsBetaBuild ? $" Beta {Main.BetaBuildNumber}" : string.Empty);
                 Main.credentialsText = $"{echo} \n{name}";
                 //Main.credentialsText = $"<color={Main.ModColor}>Project Echo</color> <color=#FFFFFF>Development</color>";
                 //Main.credentialsText = $"{Utils.GradientColorText(false, Main.ModColor, Main.ModColor2, "Project Echo")} Development";
@@ -77,9 +77,9 @@ namespace TheDarkRoles
                 {
                     Main.credentialsText += $"\r\n<#F39C12><size=120%>{GetString("Prerelease")}</size></color>";
                 }
-//#if DEBUG
+                //#if DEBUG
                 //Main.credentialsText += $"\r\n<color={Main.ModColor}>{ThisAssembly.Git.Branch}({ThisAssembly.Git.Commit})</color>";
-//#endif
+                //#endif
                 var credentials = TMPTemplate.Create(
                     "TOHCredentialsText",
                     Main.credentialsText,

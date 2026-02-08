@@ -201,26 +201,12 @@ namespace TheDarkRoles
             //#######################################
             //           ==最終結果表示==
             //#######################################
-
             var showInitially = Main.ShowResults.Value;
-            showHideButton = new SimpleButton(
-               __instance.transform,
-               "ShowHideResultsButton",
-               new(-4.5f, 2.6f, -14f),  // BackgroundLayer(z=-13)より手前
-               new(0, 136, 209, byte.MaxValue),
-               new(0, 196, byte.MaxValue, byte.MaxValue),
-               () =>
-               {
-                   var setToActive = !roleSummary.gameObject.activeSelf;
-                   roleSummary.gameObject.SetActive(setToActive);
-                   Main.ShowResults.Value = setToActive;
-                   showHideButton.Label.text = GetString(setToActive ? "HideResults" : "ShowResults");
-               },
-               GetString(showInitially ? "HideResults" : "ShowResults"))
+
+            new LateTask(() =>
             {
-                Scale = new(1.5f, 0.5f),
-                FontSize = 2f,
-            };
+                CreateShowHideButton(__instance, showInitially);
+            }, 0.1f);
 
             StringBuilder sb = new($"{GetString("RoleSummaryText")}");
             List<byte> cloneRoles = new(PlayerState.AllPlayerStates.Keys);
@@ -247,6 +233,28 @@ namespace TheDarkRoles
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
             //Utils.ApplySuffix();
+        }
+
+        private static void CreateShowHideButton(EndGameManager __instance, bool showInitially)
+        {
+            showHideButton = new SimpleButton(
+    __instance.transform,
+    "ShowHideResultsButton",
+    new(-4.5f, 2.6f, -14f),
+    new(0, 136, 209, byte.MaxValue),
+    new(0, 196, byte.MaxValue, byte.MaxValue),
+    () =>
+    {
+        var setToActive = !roleSummary.gameObject.activeSelf;
+        roleSummary.gameObject.SetActive(setToActive);
+        Main.ShowResults.Value = setToActive;
+        showHideButton.Label.text = GetString(setToActive ? "HideResults" : "ShowResults");
+    },
+    GetString(showInitially ? "HideResults" : "ShowResults"))
+            {
+                Scale = new(1.5f, 0.5f),
+                FontSize = 2f,
+            };
         }
     }
 }

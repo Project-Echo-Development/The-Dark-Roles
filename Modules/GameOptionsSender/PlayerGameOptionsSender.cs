@@ -7,6 +7,8 @@ using InnerNet;
 using Mathf = UnityEngine.Mathf;
 
 using TheDarkRoles.Roles.Core;
+using TheDarkRoles.Roles.AddOns.Common;
+using TheDarkRoles.Roles.Crewmate;
 
 namespace TheDarkRoles.Modules
 {
@@ -107,8 +109,22 @@ namespace TheDarkRoles.Modules
                     case CustomRoles.Watcher:
                         opt.SetBool(BoolOptionNames.AnonymousVotes, false);
                         break;
+                    case CustomRoles.Flash:
+                        Flash.DoSpeed(player);
+                        break;
+                    case CustomRoles.Sloth:
+                        Sloth.DoSpeed(player);
+                        break;
                 }
             }
+
+            switch (player.GetCustomRole())
+            {
+                case CustomRoles.For:
+                    For.ApplySpeed(player);
+                    break;
+            }
+
             if (Main.AllPlayerKillCooldown.TryGetValue(player.PlayerId, out var killCooldown))
             {
                 AURoleOptions.KillCooldown = Mathf.Max(0f, killCooldown);

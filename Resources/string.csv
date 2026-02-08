@@ -85,6 +85,9 @@
 "LastImpostor","Last Impostor"
 "Watcher","Watcher"
 "Workhorse","Workhorse"
+"Flash","Flash"
+"Sloth","Sloth"
+"Wise","Wise"
 
 "# Teams"
 "Team","Team"
@@ -523,6 +526,8 @@
 "AssignOnlyTo%role%","Assign Only To %role%"
 "WorkhorseNumLongTasks","Additional Long Tasks"
 "WorkhorseNumShortTasks","Additional Short Tasks"
+"FlashSpeedMultiplier","Flash Speed Multiplier"
+"SlothSpeedMultiplier","Flash Speed Multiplier"
 
 "# Spawn Points"
 "Junction","Junction"

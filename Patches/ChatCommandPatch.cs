@@ -315,14 +315,15 @@ namespace TheDarkRoles
 
                 // 属性
                 roleCommands.Add((CustomRoles)(-5), $"== {GetString("Addons")} ==");  // 区切り用
-                roleCommands.Add(CustomRoles.Lovers, "lo");
-                roleCommands.Add(CustomRoles.Watcher, "wat");
-                roleCommands.Add(CustomRoles.Workhorse, "wh");
+                roleCommands.Add(CustomRoles.Lovers, "lovers");
+                roleCommands.Add(CustomRoles.Watcher, "watcher");
+                roleCommands.Add(CustomRoles.Watcher, "flash");
+                roleCommands.Add(CustomRoles.Workhorse, "workhorse");
 
                 // HAS
                 roleCommands.Add((CustomRoles)(-6), $"== {GetString("HideAndSeek")} ==");  // 区切り用
-                roleCommands.Add(CustomRoles.HASFox, "hfo");
-                roleCommands.Add(CustomRoles.HASTroll, "htr");
+                roleCommands.Add(CustomRoles.HASFox, "hasfox");
+                roleCommands.Add(CustomRoles.HASTroll, "hastroll");
 #pragma warning restore IDE0028
             }
 

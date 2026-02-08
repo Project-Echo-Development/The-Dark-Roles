@@ -28,7 +28,8 @@ public class SimpleButton
     {
         if (baseButton == null)
         {
-            throw new InvalidOperationException("baseButtonが未設定");
+            Logger.Error("SimpleButton failed: baseButton not found", "[SimpleButton]");
+            return;
         }
 
         Button = Object.Instantiate(baseButton, parent);
