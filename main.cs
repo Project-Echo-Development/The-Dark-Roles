@@ -41,8 +41,8 @@ namespace TheDarkRoles
         public static readonly string ForkId = "theDarkRoles";
         // Discordボタンを表示するか / Show Discord Button (Default: true)
         public static readonly bool ShowDiscordButton = true;
-        // Discordサーバーの招待リンク / Discord Server Invite URL (Default: https://discord.gg/maul)
-        public static readonly string DiscordInviteUrl = "https://discord.gg/maul";
+        // Discordサーバーの招待リンク / Discord Server Invite URL (Default: https://discord.gg/9YdSgkF7yC)
+        public static readonly string DiscordInviteUrl = "https://discord.gg/9YdSgkF7yC";
         // ==========
         public const string OriginalForkId = "OriginalTOH"; // Don't Change The Value. / この値を変更しないでください。
         // == 認証設定 / Authentication Config ==

@@ -31,6 +31,7 @@ namespace TheDarkRoles.Roles.AddOns.Crewmate
             var (killer, target) = info.AttemptTuple;
             if (target.Is(CustomRoles.Bait) && !info.IsSuicide)
                 _ = new LateTask(() => killer.CmdReportDeadBody(target.Data), 0.15f, "Bait Self Report");
+            Logger.Info($"Bait OnBaitDeath: killer={killer?.PlayerId}, target={target.PlayerId}, IsSuicide={info.IsSuicide}", "Bait Report");
         }
     }
 }

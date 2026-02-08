@@ -60,9 +60,9 @@ namespace DarkRoles.Patches
                             Text = "<size=150%>Welcome to The Dark Roles v1.0.0 by Project Echo Development!</size>\n\n<size=125%>Support for Among Us v17.1s and up!</size>\n"
                                 + "\n【Base】\n - Base on TOH\r\n"
                                 + "\n【Added】\n - An indoor pool\r\n"
-                                + "\n【Changes】\n - Mod is refreshed\n\r"
+                                + "\n【Changes】\n - Mod is refreshed better than ever\n\r"
                                 + "\n【Message】\n - Apologies for such a long wait. In the process of development, I lost motivation to work on the project multiple times. At last, I am proud to finally release The Dark Roles!\r",
-                            Date = "2026-01-12T00:00:00Z"
+                            Date = "2026-02-08T00:00:00Z"
                         };
                         AllModNews.Add(news);
                     }

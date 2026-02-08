@@ -1,7 +1,7 @@
 using AmongUs.GameOptions;
 using TheDarkRoles.Roles.Core;
 
-namespace TownOfHost.Roles.Vanilla;
+namespace TheDarkRoles.Roles.Vanilla;
 
 public sealed class Detective : RoleBase
 {

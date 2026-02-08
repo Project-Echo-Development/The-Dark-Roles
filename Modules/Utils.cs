@@ -522,13 +522,16 @@ namespace TheDarkRoles
                             sb.Append(Watcher.SubRoleMark);
                             break;
                         case CustomRoles.Flash:
-                            sb.Append(Wise.SubRoleMark);
+                            sb.Append(Flash.SubRoleMark);
                             break;
                         case CustomRoles.Sloth:
                             sb.Append(Sloth.SubRoleMark);
                             break;
                         case CustomRoles.Wise:
                             sb.Append(Wise.SubRoleMark);
+                            break;
+                        case CustomRoles.Bait:
+                            sb.Append(Bait.SubRoleMark);
                             break;
                     }
                 }

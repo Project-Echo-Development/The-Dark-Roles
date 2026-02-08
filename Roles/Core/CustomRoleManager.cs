@@ -126,12 +126,8 @@ public static class CustomRoleManager
         if (targetRole != null)
             targetRole.OnMurderPlayerAsTarget(info);
 
-        switch (attemptTarget.GetCustomRole())
-        {
-            case CustomRoles.Bait:
-                Bait.OnBaitDeath(info);
-                break;
-        }
+        if (attemptTarget.Is(CustomRoles.Bait))
+            Bait.OnBaitDeath(info);
 
         //その他視点の処理があれば実行
         foreach (var onMurderPlayer in OnMurderPlayerOthers.ToArray())
@@ -250,6 +246,9 @@ public static class CustomRoleManager
                     break;
                 case CustomRoles.Wise:
                     Wise.Add(pc.PlayerId);
+                    break;
+                case CustomRoles.Bait:
+                    Bait.Add(pc.PlayerId);
                     break;
             }
         }

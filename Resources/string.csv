@@ -112,7 +112,6 @@
 "SKMadmateInfo","You are now on Team Impostors"
 
 "# Crew Roles Info"
-"BaitInfo","Trap your enemies"
 "LighterInfo","Light 'em up"
 "MayorInfo","Your vote has more influence"
 "SabotageMasterInfo","Fix sabotages faster"
@@ -178,7 +177,6 @@
 "SKMadmateInfoLong","(Impostors):\nThe player closest to a Shapeshifter when they shapeshift will become a Sidekick Madmate. You have no tasks."
 
 "# Crew Roles Info Long"
-"BaitInfoLong","When you are killed, you force your killer to immediately self-report."
 "LighterInfoLong","Your vision will increase."
 "MayorInfoLong","You have multiple votes, which will all go towards the one person you vote or skip."
 "SabotageMasterInfoLong","You can Fix Reactors, O2, Communications by yourself.\nLights can be fixed with the flick of one switch.\nOpening a door will open all doors to that room."
@@ -241,6 +239,10 @@
 "LastImpostorInfoLong","(Add-ons):\nAn Add-on granted to the last Impostor remaining.\nKill cooldown is reduced according to this setting.\nNot granted to Bounty Hunters, Serial Killers, or Vampires."
 "WatcherInfoLong","(Add-ons):\nYou can see everyone's votes even if anonymous voting is on."
 "WorkhorseInfoLong","(Add-ons):\nAn Add-on granted to the first living Crewmate finishing all the tasks.\nYou are assigned additional tasks necessary for the tasks win.\nNot granted to roles with no tasks or with abilities triggered by finishing tasks."
+"BaitInfoLong","(Add-ons):\nWhen you are killed, you force your killer to immediately self-report."
+"WiseInfoLong","(Add-ons):\nThe Wise will find one random persons role each meeting, but wont know whose role they just concovered."
+"FlashInfoLong","(Add-ons):\nYoure super fast"
+"SlothInfoLong","(Add-ons):\nYoure slower than the other crewmates because youre a sloth."
 
 "# Basis"
 "Basis","Basis"
@@ -255,6 +257,10 @@
 "# Addons Info"
 "WatcherInfo","Gaze upon all votes"
 "WorkhorseInfo","You have Extra tasks"
+"BaitInfo","Trap your enemies"
+"FlashInfo","Nyooooom"
+"SlothInfo","Slooowwww"
+"WiseInfo","Get a role hint"
 
 "# Mod Settings"
 "HideAndSeek","Hide and Seek"

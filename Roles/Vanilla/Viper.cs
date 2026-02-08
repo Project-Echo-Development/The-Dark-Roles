@@ -2,7 +2,7 @@ using AmongUs.GameOptions;
 using TheDarkRoles.Roles.Core;
 using TheDarkRoles.Roles.Core.Interfaces;
 
-namespace TownOfHost.Roles.Vanilla;
+namespace TheDarkRoles.Roles.Vanilla;
 
 public sealed class Viper : RoleBase, IImpostor
 {

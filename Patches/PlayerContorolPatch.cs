@@ -448,7 +448,8 @@ namespace TheDarkRoles
                 if (GameStates.IsLobby && (ModUpdater.hasUpdate || ModUpdater.isBroken || !Main.AllowPublicRoom || !VersionChecker.IsSupported || !Main.IsPublicAvailableOnThisVersion) && AmongUsClient.Instance.IsGamePublic)
                     AmongUsClient.Instance.ChangeGamePublic(false);
 
-                if (GameStates.IsInTask && ReportDeadBodyPatch.CanReport[__instance.PlayerId] && ReportDeadBodyPatch.WaitReport[__instance.PlayerId].Count > 0)
+                if (GameStates.IsInTask && ReportDeadBodyPatch.CanReport.TryGetValue(__instance.PlayerId, out var canReport) && canReport
+                    && ReportDeadBodyPatch.WaitReport.TryGetValue(__instance.PlayerId, out var waitList) && waitList.Count > 0)
                 {
                     var info = ReportDeadBodyPatch.WaitReport[__instance.PlayerId][0];
                     ReportDeadBodyPatch.WaitReport[__instance.PlayerId].Clear();
@@ -456,12 +457,11 @@ namespace TheDarkRoles
                     __instance.ReportDeadBody(info);
                 }
 
-                if (player.Is(CustomRoles.Magician))
-                    if (Magician.HasVented[player.PlayerId] && !player.inVent)
-                    {
-                        Magician.OnExitVent(player);
-                        Magician.HasVented[player.PlayerId] = false;
-                    }
+                if (player.Is(CustomRoles.Magician) && Magician.HasVented.TryGetValue(player.PlayerId, out var hasVented) && hasVented && !player.inVent)
+                {
+                    Magician.OnExitVent(player);
+                    Magician.HasVented[player.PlayerId] = false;
+                }
 
                 DoubleTrigger.OnFixedUpdate(player);
 
@@ -568,7 +568,13 @@ namespace TheDarkRoles
                     if (Utils.IsActive(SystemTypes.Comms) && Options.CommsCamouflage.GetBool())
                         RealName = $"<size=0>{RealName}</size> ";
 
-                    string DeathReason = seer.Data.IsDead && seer.KnowDeathReason(target) ? $"({Utils.ColorString(Utils.GetRoleColor(CustomRoles.Doctor), Utils.GetVitalText(target.PlayerId))})" : "";
+                    string DeathReason = "";
+                    if (seer.Data.IsDead && seer.KnowDeathReason(target))
+                    {
+                        var vital = Utils.GetVitalText(target.PlayerId);
+                        if (vital != null)
+                            DeathReason = $"({Utils.ColorString(Utils.GetRoleColor(CustomRoles.Doctor), vital)})";
+                    }
                     //Mark・Suffixの適用
                     target.cosmetics.nameText.text = $"{RealName}{DeathReason}{Mark}";
 
