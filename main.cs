@@ -29,7 +29,7 @@ namespace TheDarkRoles
         // modの名前 / Mod Name (Default: Town Of Host)
         public static readonly string ModName = "The Dark Roles";
         public static readonly bool IsBetaBuild = true;
-        public static readonly byte BetaBuildNumber = 1;
+        public static readonly int BetaBuildNumber = 2;
         // modの色 / Mod Color (Default: #00bfff)
         public static readonly string ModColor = "#D57DFF";
         public static readonly string ModColor2 = "#D5C7FF";
