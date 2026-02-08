@@ -30,7 +30,7 @@ namespace TheDarkRoles.Roles.Crewmate
         public override bool OnCheckMurderAsTarget(MurderInfo info)
         {
             var (killer, target) = info.AttemptTuple;
-            if (target.Is(CustomRoles.Aware) && Target[target.PlayerId] == killer.PlayerId)
+            if (target.Is(CustomRoles.Aware) && Target.TryGetValue(target.PlayerId, out var markedKiller) && markedKiller == killer.PlayerId)
             {
                 target.RpcMurderPlayerV2(killer);
                 var state = PlayerState.GetByPlayerId(killer.PlayerId);
@@ -39,8 +39,7 @@ namespace TheDarkRoles.Roles.Crewmate
                 Target.Clear();
                 return false;
             }
-            else
-                return true;
+            return true;
         }
 
         public override bool CheckVoteAsVoter(PlayerControl votedFor)
