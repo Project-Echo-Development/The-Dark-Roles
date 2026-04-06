@@ -1,5 +1,4 @@
 ﻿<h1 style="text-align: center;">
-  <span style="color: #D57DFF;">🎮 Project Echo:</span>
   <span style="color: #e2e2e2;"> The Dark Roles</span>
 </h1>
 

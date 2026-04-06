@@ -316,7 +316,7 @@ namespace TheDarkRoles
     {
         None = 0,
         ModName,
-        ProjectEcho,
+        TheDarkRoles,
         Sleepy,
     }
     public enum VoteMode

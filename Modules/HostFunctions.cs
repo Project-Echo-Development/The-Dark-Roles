@@ -12,7 +12,7 @@ using UnityEngine.ProBuilder;
 
 namespace TheDarkRoles.Modules
 {
-    // Made by Project Echo Development
+    // Made by justmedark
     public class HostFunctions : MonoBehaviour
     {
         public HostFunctions(IntPtr ptr) : base(ptr) { }
@@ -116,7 +116,7 @@ namespace TheDarkRoles.Modules
                     }
                 }
             };
-            GUILayout.Window(0, new Rect(10, 10, 300, 200), value, "Project Echo: Host Functions", new GUIStyle()
+            GUILayout.Window(0, new Rect(10, 10, 300, 200), value, "Host Functions", new GUIStyle()
             {
                 normal = { background = windowTexture, textColor = new Color(1.0f, 0.87f, 0.96f, 0.4f) },
                 fontSize = 16,

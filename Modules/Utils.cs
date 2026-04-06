@@ -1027,8 +1027,8 @@ namespace TheDarkRoles
                         name = $"{GradientColorText(Main.ModColorNoTag, Main.ModColor2NoTag, $"{Main.ModName}")} <color=#ffffff>v{Main.PluginVersion}</color>";
                         name += $"\n\r{GradientColorText(Main.ModColorNoTag, Main.ModColor2NoTag, username)}";
                         break;
-                    case SuffixModes.ProjectEcho:
-                        name = $"{GradientColorText(Main.ModColorNoTag, Main.ModColor2NoTag, "Project Echo")}";
+                    case SuffixModes.TheDarkRoles:
+                        name = $"{GradientColorText(Main.ModColorNoTag, Main.ModColor2NoTag, "The Dark Roles")}";
                         name += $"\n\r{GradientColorText(Main.ModColorNoTag, Main.ModColor2NoTag, username)}";
                         break;
                     case SuffixModes.Sleepy:

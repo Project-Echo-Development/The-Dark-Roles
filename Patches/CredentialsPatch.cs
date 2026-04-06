@@ -66,9 +66,9 @@ namespace TheDarkRoles
             static void Postfix(VersionShower __instance)
             {
                 TMPTemplate.SetBase(__instance.text);
-                var echo = Utils.GradientColorText(Main.ModColorNoTag, Main.ModColor2NoTag, "Project Echo") + " Development";
+                var jmd = Utils.GradientColorText(Main.ModColorNoTag, Main.ModColor2NoTag, "by") + " justmedark";
                 var name = Utils.GradientColorText(Main.ModColorNoTag, Main.ModColor2NoTag, Main.ModName) + " " + Main.PluginVersion + (Main.IsBetaBuild ? $" Beta {Main.BetaBuildNumber}" : string.Empty);
-                Main.credentialsText = $"{echo} \n{name}";
+                Main.credentialsText = $"{name} \n{jmd}";
                 //Main.credentialsText = $"<color={Main.ModColor}>Project Echo</color> <color=#FFFFFF>Development</color>";
                 //Main.credentialsText = $"{Utils.GradientColorText(false, Main.ModColor, Main.ModColor2, "Project Echo")} Development";
                 //Main.credentialsText += $"\n{Utils.GradientColorText(false, Main.ModColor, Main.ModColor2, $"{Main.ModName}")} {Main.PluginVersion}";
